@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Detective Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background overlay -->
+        <div class="background-overlay"></div>
+        
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Luxe Leviathan 49 Agency</h1>
+        </header>
+        
+        <!-- Main content area -->
+        <main class="main-content">
+            <!-- Left sidebar with event info -->
+            <aside class="sidebar">
+                <div class="event-info">
+                    <h2 class="event-title">Event</h2>
+                    <p class="event-subtitle">@chemistry480</p>
+                    <p class="event-description">pecahkan dan dapatkan hadiah</p>
+                    
+                    <h3 class="case-title">Pecahkan</h3>
+                    <h3 class="case-subtitle">Teka-Teki</h3>
+                    
+                    <p class="case-description">Berikan kamu apa yang sebenarnya terjadi</p>
+                </div>
+            </aside>
+            
+            <!-- Detective board area -->
+            <section class="detective-board">
+                <!-- Photo pins with connecting strings -->
+                <div class="photo-container" id="photo1" style="top: 15%; left: 20%;">
+                    <img src="https://via.placeholder.com/150x200/8B4513/FFFFFF?text=Evidence+1" alt="Evidence 1" class="evidence-photo">
+                    <div class="pin"></div>
+                </div>
+                
+                <div class="photo-container" id="photo2" style="top: 25%; left: 45%;">
+                    <img src="https://via.placeholder.com/120x160/654321/FFFFFF?text=Suspect+A" alt="Suspect A" class="evidence-photo">
+                    <div class="pin"></div>
+                </div>
+                
+                <div class="photo-container" id="photo3" style="top: 10%; right: 15%;">
+                    <img src="https://via.placeholder.com/140x180/4A4A4A/FFFFFF?text=Location" alt="Location" class="evidence-photo">
+                    <div class="pin"></div>
+                </div>
+                
+                <div class="photo-container" id="photo4" style="top: 45%; left: 15%;">
+                    <img src="https://via.placeholder.com/130x170/8B0000/FFFFFF?text=Clue+1" alt="Clue 1" class="evidence-photo">
+                    <div class="pin"></div>
+                </div>
+                
+                <div class="photo-container" id="photo5" style="top: 50%; left: 40%;">
+                    <img src="https://via.placeholder.com/110x150/2F4F4F/FFFFFF?text=Document" alt="Document" class="evidence-photo">
+                    <div class="pin"></div>
+                </div>
+                
+                <div class="photo-container" id="photo6" style="top: 35%; right: 20%;">
+                    <img src="https://via.placeholder.com/125x165/556B2F/FFFFFF?text=Witness" alt="Witness" class="evidence-photo">
+                    <div class="pin"></div>
+                </div>
+                
+                <!-- Connecting strings -->
+                <svg class="connection-lines" width="100%" height="100%">
+                    <line class="connection-line" x1="20%" y1="25%" x2="45%" y2="35%"></line>
+                    <line class="connection-line" x1="45%" y1="35%" x2="75%" y2="20%"></line>
+                    <line class="connection-line" x1="20%" y1="55%" x2="45%" y2="35%"></line>
+                    <line class="connection-line" x1="45%" y1="60%" x2="75%" y2="45%"></line>
+                    <line class="connection-line" x1="20%" y1="25%" x2="20%" y2="55%"></line>
+                </svg>
+                
+                <!-- Question mark -->
+                <div class="mystery-question">
+                    <h2>who is he?</h2>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Control panel for changing images -->
+        <div class="control-panel">
+            <h3>Change Evidence</h3>
+            <div class="controls">
+                <select id="photoSelect">
+                    <option value="photo1">Evidence 1</option>
+                    <option value="photo2">Suspect A</option>
+                    <option value="photo3">Location</option>
+                    <option value="photo4">Clue 1</option>
+                    <option value="photo5">Document</option>
+                    <option value="photo6">Witness</option>
+                </select>
+                <input type="file" id="imageUpload" accept="image/*">
+                <input type="url" id="imageUrl" placeholder="Or enter image URL">
+                <button id="changeImage">Update Photo</button>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Luxe Leviathan 49 Agency</p>
+        </footer>
+    </div>
+    
+    <!-- Particles for atmosphere -->
+    <div id="particles"></div>
+    
+    <!-- Load JavaScript modules -->
+    <script src="animations.js"></script>
+    <script src="particles.js"></script>
+    <script src="photoManager.js"></script>
+    <script src="connectionLines.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
